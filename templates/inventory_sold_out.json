@@ -1,0 +1,107 @@
+{
+  "title": "No Inventory - Room Sold Out",
+  "type": "inventory",
+  "sub_type": "sold_out",
+  "description": "This persuasion is to notify that your inventory is sold out.",
+  "is_active": true,
+  "tags": [
+    "ingo"
+  ],
+  "expiry_days": 30,
+  "source": {
+    "ds_name": "mysql",
+    "execute": "select a.available, a.booked, a.blocked, a.room_code, a.idate, b.roomtype, b.noofrooms, b.roomtypename, c.hotelcode from hotels_inventorymanager3 a join hotels_roomdetail b on (a.room_code = b.roomtypecode) join hotels_hoteldetail c on (c.id = b.hotel_id) where b.hotel_id='{hotel_id}' and idate='{current_date}' and b.isActive={is_active} and available={avail_threshold} and blocked={blocked}",
+    "params": {
+      "hotel_id": "hotel_id",
+      "current_date": "date",
+      "is_active": "is_room_active",
+      "avail_threshold": 0,
+      "blocked": 0
+    },
+    "keys_mapping": [
+      {
+        "destination": "hotel_id",
+        "exp": "hotelcode"
+      },
+      {
+        "destination": "room_code",
+        "exp": "room_code"
+      },
+      {
+        "destination": "room_name",
+        "exp": "roomtypename"
+      },
+      {
+        "destination": "room_type",
+        "exp": "roomtype"
+      },
+      {
+        "destination": "checkin_date",
+        "exp": "idate"
+      },
+      {
+        "destination": "current_inventory",
+        "exp": "available"
+      },
+      {
+        "destination": "current_booked",
+        "exp": "booked"
+      }
+    ],
+    "group_by": [
+      "hotel_id",
+      "room_code"
+    ]
+  },
+  "persuasions": {
+    "wf_name": "WFInventorySoldOut",
+    "consumers": {
+      "firebase": {
+        "is_active": false,
+        "attributes": [
+          {
+            "redirect_link": "/extranet/#inventory",
+            "cta_botton_name": "Update Inventory",
+            "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
+          }
+        ]
+      },
+      "sandesh": {
+        "is_active": true,
+        "attributes": [
+          {
+            "event_id": "SEVT00013",
+            "event_data": {
+              "hotel_id": "{hotel_id}",
+              "room_name": "{room_name}",
+              "room_code": "{room_code}"
+            },
+            "communication_mode": "email/whatsApp",
+            "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "on_start": {
+      "attributes": {
+        "messages": "Sold out persuasion started!!!"
+      },
+      "wf_name": [
+        "slack_notification",
+        "whatsapp"
+      ]
+    },
+    "on_data_fetch": "",
+    "on_complete": {
+      "attributes": {
+        "messages": "Sold out persuasion completed!!!"
+      },
+      "wf_name": [
+        "slack_notification",
+        "whatsapp"
+      ]
+    }
+  }
+}
