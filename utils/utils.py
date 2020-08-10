@@ -28,6 +28,8 @@ class Utils:
 
     @staticmethod
     def template_source_keys_mapping(response, keys_to_be_mapped):
+        if not keys_to_be_mapped:
+            return response
         results = []
         for data in response:
             locals().update(data)  # This will export the data packet for eval
