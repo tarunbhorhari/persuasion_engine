@@ -4,7 +4,7 @@ import datetime
 class Utils:
     @staticmethod
     def query_builder(query, query_param, source):
-        if source in ["es", "mysql"]:
+        if source in ["es", "mysql"] and isinstance(query, str):
             return query.format(**query_param)
         return None
 
@@ -21,20 +21,17 @@ class Utils:
 
     @staticmethod
     def convert_tuple_to_dict(headers, tuples):
-        results = []
-        for row in tuples:
-            results.append(dict(zip(headers, row)))
-        return results
+        return [dict(zip(headers, row)) for row in tuples]
 
     @staticmethod
     def template_source_keys_mapping(response, keys_to_be_mapped):
         if not keys_to_be_mapped:
             return response
+
         results = []
         for data in response:
             locals().update(data)  # This will export the data packet for eval
             result = dict()
-            # TODO - if keys to be mapped is empty
             for key_mapping in keys_to_be_mapped:
                 result[key_mapping["destination"]] = eval(key_mapping['exp'])
             results.append(result)

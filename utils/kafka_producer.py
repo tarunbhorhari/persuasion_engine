@@ -1,29 +1,31 @@
+import logging
+
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
 from settings.app_constants import KAFKA_SERVER
 
+logger = logging.getLogger("persuasion_engine")
+
 
 class Producer:
-    # TODO - Add Exception Handling
     producer = None
 
     def __init__(self):
-        self.producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER['HOST'])
+        self.producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["PRODUCER"]["HOST"])
 
     def on_success(self):
-        # TODO - Add logging here
         message = "Pushed message to kafka successfully"
-        print(message)
+        logger.info(message)
 
     def on_failure(self, e):
-        # TODO - Add logging here
         message = "Failed to push message to kafka " + repr(e)
-        print(message)
+        logger.error(message)
 
     def push_message(self, topic, key, value):
 
-        future = self.producer.send(topic, value).add_callback(self.on_success).add_errback(self.on_failure)
+        future = self.producer.send(topic, key=key, value=value).add_callback(self.on_success).add_errback(
+            self.on_failure)
         data = dict()
         try:
             result = future.get(timeout=60)

@@ -49,8 +49,7 @@
       }
     ],
     "group_by": [
-      "hotel_id",
-      "room_code"
+      "hotel_id"
     ]
   },
   "persuasions": {
@@ -62,21 +61,6 @@
           {
             "redirect_link": "/extranet/#inventory",
             "cta_botton_name": "Update Inventory",
-            "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
-          }
-        ]
-      },
-      "sandesh": {
-        "is_active": true,
-        "attributes": [
-          {
-            "event_id": "SEVT00013",
-            "event_data": {
-              "hotel_id": "{hotel_id}",
-              "room_name": "{room_name}",
-              "room_code": "{room_code}"
-            },
-            "communication_mode": "email/whatsApp",
             "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
           }
         ]
