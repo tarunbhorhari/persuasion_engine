@@ -21,5 +21,5 @@ class PersuasionEngine:
             response = PersuasionProcessor.process(data)
         except Exception as e:
             logger.error("Exception while creating persuasion " + repr(e))
-            return jsonify(dict())
-        return jsonify(response)
+            return jsonify(dict(status="failure", error=repr(e)))
+        return jsonify(dict(status="success", data=response))

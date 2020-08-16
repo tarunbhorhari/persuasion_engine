@@ -75,7 +75,7 @@ class PersuasionBuilder:
     def publish_to_kafka(cls, persuasion):
         kafka_resp = dict()
         try:
-            topic = KAFKA_SERVER["PRODUCER"]["TOPIC"]
+            topic = KAFKA_SERVER["TOPIC"]["PERSUASION"]
             producer = Producer()
             key = persuasion["p_id"].encode("utf-8")
             value = json.dumps(persuasion).encode("utf-8")

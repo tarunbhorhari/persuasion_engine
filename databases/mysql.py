@@ -1,29 +1,18 @@
 import json
 import logging
 
-from flaskext.mysql import MySQL
-
-from settings import app
-from settings.app_constants import DATABASES
+from settings import mysql
 from utils.utils import Utils
 
 logger = logging.getLogger("persuasion_engine")
 
 
 class MYSQL:
-    mysql = MySQL()
-
-    @staticmethod
-    def initialize_sql_config():
-        app.config['MYSQL_DATABASE_USER'] = DATABASES['default']['USER']
-        app.config['MYSQL_DATABASE_PASSWORD'] = DATABASES['default']['PASSWORD']
-        app.config['MYSQL_DATABASE_DB'] = DATABASES['default']['NAME']
-        app.config['MYSQL_DATABASE_HOST'] = DATABASES['default']['HOST']
-        MYSQL.mysql.init_app(app)
 
     @classmethod
     def get_cursor(cls):
-        return MYSQL.mysql.get_db().cursor()
+        # return mysql.get_db().cursor()
+        return mysql.connect().cursor()
 
     @staticmethod
     def fetch_data(query):

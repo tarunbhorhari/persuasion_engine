@@ -17,12 +17,12 @@ DATABASES = {
 }
 
 KAFKA_SERVER = {
-    "PRODUCER": {
-        "HOST": "localhost:9092",
-        "TOPIC": "persuasion-test"
+    "HOST": "localhost:9092",
+    "TOPIC": {
+        "PERSUASION": "persuasion-test",
+        "WATSON": "persuasion-test2"
     },
-    "CONSUMER": {
-        "HOST": "localhost:9092",
-        "TOPIC": "persuasion-test"
+    "GROUP": {
+        "PERSUASION": "persuasion"
     }
 }

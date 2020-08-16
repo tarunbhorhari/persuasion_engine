@@ -12,7 +12,7 @@ class Producer:
     producer = None
 
     def __init__(self):
-        self.producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["PRODUCER"]["HOST"])
+        self.producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["HOST"])
 
     def on_success(self):
         message = "Pushed message to kafka successfully"
