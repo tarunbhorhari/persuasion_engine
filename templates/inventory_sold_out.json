@@ -49,8 +49,7 @@
       }
     ],
     "group_by": [
-      "hotel_id",
-      "room_code"
+      "hotel_id"
     ]
   },
   "persuasions": {

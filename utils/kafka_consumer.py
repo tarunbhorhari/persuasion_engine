@@ -14,7 +14,9 @@ INTERRUPT_EVENT = Event()
 
 consumer = FlaskKafka(INTERRUPT_EVENT,
                       bootstrap_servers=KAFKA_SERVER["HOST"],
-                      group_id=KAFKA_SERVER["GROUP"]["PERSUASION"])
+                      group_id=KAFKA_SERVER["GROUP"]["PERSUASION"],
+                      enable_auto_commit=False,
+                      request_timeout_ms=30000)
 
 
 def listen_kill_server():
@@ -27,7 +29,8 @@ def listen_kill_server():
 @consumer.handle(KAFKA_SERVER["TOPIC"]["WATSON"])
 def kafka_consumer_listener(con):
     try:
-        PersuasionProcessor.process(json.loads(con.value))
+        data = json.loads(con.value)
+        PersuasionProcessor.process(data)
         logger.info("consumed {} from persuasion-test2".format(con.value))
     except Exception as e:
         logger.critical("Exception in persuasion kafka consumer - " + repr(e))

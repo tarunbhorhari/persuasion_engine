@@ -1,7 +1,7 @@
 import json
 import logging
 
-from settings import mysql
+import settings
 from utils.utils import Utils
 
 logger = logging.getLogger("persuasion_engine")
@@ -12,7 +12,7 @@ class MYSQL:
     @classmethod
     def get_cursor(cls):
         # return mysql.get_db().cursor()
-        return mysql.connect().cursor()
+        return settings.mysql.connect().cursor()
 
     @staticmethod
     def fetch_data(query):

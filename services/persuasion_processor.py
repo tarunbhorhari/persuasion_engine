@@ -16,7 +16,7 @@ class PersuasionProcessor:
         file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
         # TODO - Add persuasion config variable here and fetch config accordingly
         # TODO - Add request data validation
-        persuasion_resp = dict()
+        persuasion_resp = []
         logger.info("Processing persuasion config")
         with open(file_path) as persuasion_template:
             template = json.load(persuasion_template)
