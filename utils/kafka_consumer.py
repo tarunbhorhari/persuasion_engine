@@ -5,6 +5,7 @@ from threading import Event
 
 from flask_kafka import FlaskKafka
 
+from services.persuasion_builder import PersuasionBuilder
 from services.persuasion_processor import PersuasionProcessor
 from settings.app_constants import KAFKA_SERVER
 
@@ -26,11 +27,15 @@ def listen_kill_server():
     signal.signal(signal.SIGHUP, consumer.interrupted_process)
 
 
-@consumer.handle(KAFKA_SERVER["TOPIC"]["WATSON"])
+@consumer.handle(KAFKA_SERVER["TOPIC"]["PERSUASION"])
 def kafka_consumer_listener(con):
     try:
         data = json.loads(con.value)
-        PersuasionProcessor.process(data)
+        response = PersuasionProcessor.process(data)
         logger.info("consumed {} from persuasion-test2".format(con.value))
+        # Publishing each persuasion to kafka
+        meta = dict(push_to_es="true", push_to_inflow="true")
+        response = PersuasionProcessor.process(data)
+        PersuasionBuilder.publish_to_kafka(response, meta)
     except Exception as e:
         logger.critical("Exception in persuasion kafka consumer - " + repr(e))

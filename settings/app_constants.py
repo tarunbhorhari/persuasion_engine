@@ -1,5 +1,3 @@
-from elasticsearch import Elasticsearch
-
 app_name = "Generic Persuasion Engine"
 
 # DATABASE CONFIGURATIONS...
@@ -22,7 +20,9 @@ KAFKA_SERVER = {
     "HOST": "localhost:9092",
     "TOPIC": {
         "PERSUASION": "persuasion-test",
-        "WATSON": "persuasion-test2"
+        "WATSON": "persuasion-test1",
+        "INFLOW": "persuasion-test2"
+
     },
     "GROUP": {
         "PERSUASION": "persuasion"
@@ -34,12 +34,5 @@ DYNAMIC_DATA_ELASTIC_SEARCH = {
     'protocol': 'https',
     'port': 443
 }
-
-ES_CLIENT_DYNAMIC = Elasticsearch(
-    [DYNAMIC_DATA_ELASTIC_SEARCH['host']],
-    http_auth=(),
-    scheme=DYNAMIC_DATA_ELASTIC_SEARCH['protocol'],
-    port=DYNAMIC_DATA_ELASTIC_SEARCH['port']
-)
 
 PERSUASION_ES_INDEX = "persuasions_test"

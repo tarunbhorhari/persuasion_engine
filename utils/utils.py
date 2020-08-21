@@ -40,6 +40,8 @@ class Utils:
     @staticmethod
     def render_template_for_wf_consumers(data, consumers):
         result = dict()
+        if not data:
+            return result
         for key, value in consumers.items():
             attribute_template = value["attributes"][0] if value["attributes"] else dict()
             attributes = []

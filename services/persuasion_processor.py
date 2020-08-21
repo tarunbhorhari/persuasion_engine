@@ -29,8 +29,7 @@ class PersuasionProcessor:
                 # Executing SQL query
                 query_response = json.loads(MYSQL.fetch_data(query))
 
-                persuasion_resp = PersuasionBuilder.build_persuasion(request_data, query_response,
-                                                                     template) if query_response else persuasion_resp
+                persuasion_resp = PersuasionBuilder.build_persuasion(request_data, query_response, template)
             except Exception as e:
                 logger.error("Exception while processing persuasion config - " + repr(e))
 
