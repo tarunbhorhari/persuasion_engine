@@ -3,7 +3,7 @@ import logging
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-from settings.app_constants import KAFKA_SERVER
+from settings.constants import KAFKA_SERVER
 
 logger = logging.getLogger("persuasion_engine")
 

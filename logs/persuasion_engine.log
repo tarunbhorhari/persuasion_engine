@@ -1,270 +1,5 @@
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
 INFO:kafka.conn:Probing node bootstrap-0 broker version
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search?scroll=5m&size=1000 [status:200 request:0.460s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 16:19:23] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.473s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.103s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.349s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.374s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.081s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.069s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.076s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.176s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-ERROR:Generic Persuasion Engine:Exception on /persuasion/ [GET]
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: get_persuasion() missing 1 required positional argument: 'self'
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 17:56:33] "[35m[1mGET /persuasion/ HTTP/1.1[0m" 500 -
-ERROR:Generic Persuasion Engine:Exception on /persuasion/ [GET]
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: get_persuasion() missing 1 required positional argument: 'self'
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 17:56:38] "[35m[1mGET /persuasion/ HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:02:06] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-ERROR:Generic Persuasion Engine:Exception on /persuasion/ [GET]
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: get_persuasion() missing 1 required positional argument: 'self'
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:02:06] "[35m[1mGET /persuasion/ HTTP/1.1[0m" 500 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-ERROR:Generic Persuasion Engine:Exception on /persuasion/create [POST]
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: generate_persuasion() missing 1 required positional argument: 'self'
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:03:05] "[35m[1mPOST /persuasion/create HTTP/1.1[0m" 500 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:03:48] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:07:29] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.357s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:14:13] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.337s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:14:19] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:16:29] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.396s]
-ERROR:Generic Persuasion Engine:Exception on /persuasion/ [GET]
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/controller/persuasion_engine.py", line 45, in get_persuasion
-    return jsonify(dict(status="success", data=response.first() if response else dict()))
-AttributeError: 'list' object has no attribute 'first'
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:16:30] "[35m[1mGET /persuasion/ HTTP/1.1[0m" 500 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:16:40] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.345s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:09] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.683s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:10] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:14] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.420s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:15] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:22] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.071s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:23] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:24] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.074s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:25] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:26] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.067s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:26] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:28] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.083s]
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:28] "[37mGET /persuasion/ HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:18:59] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:19:09] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.295s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 18:19:50] "[32mGET /persuasion HTTP/1.1[0m" 308 -
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.401s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.445s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.325s]
-INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.115s]
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
 INFO:kafka.conn:Broker version identified as 1.0.0
 INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
@@ -286,190 +21,28 @@ INFO:kafka.coordinator:(Re-)joining group persuasion
 INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 116
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 138
 INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
 INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 29}
-INFO:persuasion_engine:{'topic': 'persuasion-test2', 'partition': 0, 'offset': 38}
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 15:53:13] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
-INFO:flask-kafka-consumer:TOPIC: persuasion-test, PAYLOAD: b'{"type":"inventory","sub_type":"sold_out","p_id":null,"source":"watson","created_on":"2020-08-07 00:00:00","data":{"hotel_id":149,"date":"2017-04-01","is_room_active":1},"meta":{}}'
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:persuasion_engine:consumed b'{"type":"inventory","sub_type":"sold_out","p_id":null,"source":"watson","created_on":"2020-08-07 00:00:00","data":{"hotel_id":149,"date":"2017-04-01","is_room_active":1},"meta":{}}' from persuasion-test2
-INFO:flask-kafka-consumer:closing consumer
-INFO:kafka.coordinator:Stopping heartbeat thread
-INFO:kafka.coordinator:Leaving consumer group (persuasion).
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:flask-kafka-consumer: * The flask Kafka application is consuming
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
-INFO:flask-kafka-consumer:starting consumer...registered signterm
-INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
-INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-INFO:kafka.coordinator:(Re-)joining group persuasion
-INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 118
-INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
-INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:flask-kafka-consumer:TOPIC: persuasion-test, PAYLOAD: b'{"type":"inventory","sub_type":"sold_out","p_id":null,"source":"watson","created_on":"2020-08-07 00:00:00","data":{"hotel_id":149,"date":"2017-04-01","is_room_active":1},"meta":{}}'
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:persuasion_engine:consumed b'{"type":"inventory","sub_type":"sold_out","p_id":null,"source":"watson","created_on":"2020-08-07 00:00:00","data":{"hotel_id":149,"date":"2017-04-01","is_room_active":1},"meta":{}}' from persuasion-test2
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 30}
-INFO:persuasion_engine:{'topic': 'persuasion-test2', 'partition': 0, 'offset': 39}
-INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_100000014129
-WARNING:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_100000014129 [status:404 request:0.568s]
-ERROR:persuasion_engine:Getting persuasion details - Exception('Invalid persuasion id - inventory_sold_out_100000014129')
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:03:33] "[37mGET /persuasion/refresh?push_to_es=True&push_to_inflow=True HTTP/1.1[0m" 200 -
 INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.430s]
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.425s]
+INFO:persuasion_engine:Processing persuasion config
+INFO:persuasion_engine:Building data source query
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 1.0.0
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+ERROR:kafka.future:Error processing callback
+Traceback (most recent call last):
+  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
+    f(value)
+TypeError: on_success() takes 1 positional argument but 2 were given
+INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 51}
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 15:57:39] "[37mGET /persuasion/refresh?push_to_es=true&push_to_inflow=false HTTP/1.1[0m" 200 -
 INFO:flask-kafka-consumer:closing consumer
 INFO:kafka.coordinator:Stopping heartbeat thread
 INFO:kafka.coordinator:Leaving consumer group (persuasion).
@@ -507,6 +80,9 @@ WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
 INFO:kafka.conn:Probing node bootstrap-0 broker version
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
@@ -529,12 +105,12 @@ INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <conne
 INFO:kafka.coordinator:(Re-)joining group persuasion
 INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 120
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 140
 INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
 INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
 INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.418s]
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.435s]
 INFO:persuasion_engine:Processing persuasion config
 INFO:persuasion_engine:Building data source query
 INFO:flask-kafka-consumer:closing consumer
@@ -543,6 +119,164 @@ INFO:kafka.coordinator:Leaving consumer group (persuasion).
 INFO:kafka.coordinator:Starting new heartbeat thread
 INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
 INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 1.0.0
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
+INFO:persuasion_engine:Initialising app level settings
+INFO:persuasion_engine:Configuring API routes
+INFO:flask-kafka-consumer: * The flask Kafka application is consuming
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
+INFO:flask-kafka-consumer:starting consumer...registered signterm
+INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
+INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:kafka.coordinator:(Re-)joining group persuasion
+INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 142
+INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
+INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
+INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.511s]
+INFO:persuasion_engine:Processing persuasion config
+INFO:persuasion_engine:Building data source query
+INFO:flask-kafka-consumer:closing consumer
+INFO:kafka.coordinator:Stopping heartbeat thread
+INFO:kafka.coordinator:Leaving consumer group (persuasion).
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
+INFO:kafka.coordinator:(Re-)joining group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 1.0.0
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
+INFO:persuasion_engine:Initialising app level settings
+INFO:persuasion_engine:Configuring API routes
+INFO:flask-kafka-consumer: * The flask Kafka application is consuming
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
+INFO:flask-kafka-consumer:starting consumer...registered signterm
+INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
+INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:kafka.coordinator:(Re-)joining group persuasion
+INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 144
+INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
+INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:flask-kafka-consumer:closing consumer
+INFO:kafka.coordinator:Stopping heartbeat thread
+INFO:kafka.coordinator:Leaving consumer group (persuasion).
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 1.0.0
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
+INFO:persuasion_engine:Initialising app level settings
+INFO:persuasion_engine:Configuring API routes
+INFO:flask-kafka-consumer: * The flask Kafka application is consuming
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
+INFO:flask-kafka-consumer:starting consumer...registered signterm
+INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
+INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:kafka.coordinator:(Re-)joining group persuasion
+INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 146
+INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
+INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
+INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.542s]
+INFO:persuasion_engine:Processing persuasion config
+INFO:persuasion_engine:Building data source query
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 16:12:08] "[37mGET /persuasion/refresh?push_to_es=true&push_to_inflow=false HTTP/1.1[0m" 200 -
+INFO:flask-kafka-consumer:closing consumer
+INFO:kafka.coordinator:Stopping heartbeat thread
+INFO:kafka.coordinator:Leaving consumer group (persuasion).
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
 WARNING:kafka.client:Unable to send to wakeup socket!
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
 ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
@@ -662,187 +396,6 @@ WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:flask-kafka-consumer: * The flask Kafka application is consuming
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
-INFO:flask-kafka-consumer:starting consumer...registered signterm
-INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
-INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-INFO:kafka.coordinator:(Re-)joining group persuasion
-INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 122
-INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
-INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.442s]
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:17:10] "[37mGET /persuasion/refresh?push_to_es=True&push_to_inflow=True HTTP/1.1[0m" 200 -
-INFO:flask-kafka-consumer:closing consumer
-INFO:kafka.coordinator:Stopping heartbeat thread
-INFO:kafka.coordinator:Leaving consumer group (persuasion).
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:flask-kafka-consumer: * The flask Kafka application is consuming
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('persuasion-test',)
-INFO:flask-kafka-consumer:starting consumer...registered signterm
-INFO:kafka.cluster:Group coordinator for persuasion is BrokerMetadata(nodeId='coordinator-0', host='ip-192-168-43-158.ap-south-1.compute.internal', port=9092, rack=None)
-INFO:kafka.coordinator:Discovered coordinator coordinator-0 for group persuasion
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-INFO:kafka.coordinator:(Re-)joining group persuasion
-INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 124
-INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
-INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 33}
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 34}
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:33:36] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.464s]
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 35}
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 36}
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:34:30] "[37mGET /persuasion/refresh?push_to_es=True&push_to_inflow=False HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.505s]
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:flask-kafka-consumer:closing consumer
-INFO:kafka.coordinator:Stopping heartbeat thread
-INFO:kafka.coordinator:Leaving consumer group (persuasion).
-INFO:kafka.coordinator:Starting new heartbeat thread
-INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
@@ -871,12 +424,12 @@ INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <conne
 INFO:kafka.coordinator:(Re-)joining group persuasion
 INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.coordinator:Successfully joined group persuasion with generation 126
+INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
+INFO:kafka.coordinator:Successfully joined group persuasion with generation 148
 INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='persuasion-test', partition=0)]
 INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
 INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.470s]
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.614s]
 INFO:persuasion_engine:Processing persuasion config
 INFO:persuasion_engine:Building data source query
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
@@ -892,64 +445,16 @@ Traceback (most recent call last):
   File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
     f(value)
 TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 37}
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:42:13] "[37mGET /persuasion/refresh?push_to_es=true&push_to_inflow=false HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Getting updated data of persuasion - inventory_sold_out_1000000149
-INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/inventory_sold_out_1000000149 [status:200 request:0.373s]
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Building data source query
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 38}
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
-INFO:kafka.conn:Broker version identified as 1.0.0
-INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: connecting to ip-192-168-43-158.ap-south-1.compute.internal:9092 [('192.168.43.158', 9092) IPv4]
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connecting> [IPv4 ('192.168.43.158', 9092)]>: Connection complete.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
-ERROR:kafka.future:Error processing callback
-Traceback (most recent call last):
-  File "/Users/tarun.bhorhari/projects/persuasion_engine/env/lib/python3.7/site-packages/kafka/future.py", line 79, in _call_backs
-    f(value)
-TypeError: on_success() takes 1 positional argument but 2 were given
-INFO:persuasion_engine:{'topic': 'persuasion-test2', 'partition': 0, 'offset': 40}
-INFO:werkzeug:127.0.0.1 - - [21/Aug/2020 16:42:40] "[37mGET /persuasion/refresh?push_to_es=true&push_to_inflow=true HTTP/1.1[0m" 200 -
-INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
-INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
+INFO:persuasion_engine:{'topic': 'persuasion-test1', 'partition': 0, 'offset': 52}
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 16:23:06] "[37mGET /persuasion/refresh?push_to_es=true&push_to_inflow=false HTTP/1.1[0m" 200 -
 INFO:flask-kafka-consumer:closing consumer
 INFO:kafka.coordinator:Stopping heartbeat thread
 INFO:kafka.coordinator:Leaving consumer group (persuasion).
-INFO:kafka.coordinator:Starting new heartbeat thread
 INFO:kafka.conn:<BrokerConnection node_id=coordinator-0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
 INFO:kafka.conn:<BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>: Closing connection. 
-INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
-WARNING:kafka.client:Unable to send to wakeup socket!
 ERROR:kafka.consumer.fetcher:Fetch to node 0 failed: Cancelled: <BrokerConnection node_id=0 host=ip-192-168-43-158.ap-south-1.compute.internal:9092 <connected> [IPv4 ('192.168.43.158', 9092)]>
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
-WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions {TopicPartition(topic='persuasion-test', partition=0)} for group persuasion
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!
 WARNING:kafka.client:Unable to send to wakeup socket!

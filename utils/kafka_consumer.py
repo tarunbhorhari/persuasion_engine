@@ -7,7 +7,7 @@ from flask_kafka import FlaskKafka
 
 from services.persuasion_builder import PersuasionBuilder
 from services.persuasion_processor import PersuasionProcessor
-from settings.app_constants import KAFKA_SERVER
+from settings.constants import KAFKA_SERVER
 
 logger = logging.getLogger("persuasion_engine")
 

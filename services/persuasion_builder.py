@@ -6,7 +6,7 @@ from datetime import timedelta
 from itertools import groupby
 from operator import itemgetter
 
-from settings.app_constants import KAFKA_SERVER
+from settings.constants import KAFKA_SERVER, PERSUASION_STATUS, DATE_FORMAT
 from utils.kafka_producer import Producer
 from utils.utils import Utils
 
@@ -21,6 +21,7 @@ class PersuasionBuilder:
             response = dict()
             response["p_id"] = body.get("p_id", None)
             response["event_source"] = body.get("source", "")
+            response["latest_event_source"] = body.get("source", "")
             response["event_created_on"] = body.get("created_on", "")
             response["meta"] = body.get("meta", {})
             response["meta"].update(dict(event_packet=body.get("data", {})))
@@ -46,12 +47,10 @@ class PersuasionBuilder:
     def create_persuasion_object(cls, response, template):
         persuasion_obj = dict(response)
         try:
-            p_id = ""
-            # TODO - Optimise the below logic
-            for x in template["source"]["group_by"]:
-                p_id += "_" + str(response["data"][0].get(x))
-            persuasion_obj["p_id"] = "%s_%s%s" % (template["type"], template["sub_type"], p_id)
-            persuasion_obj["status"] = "NEW"
+
+            p_id = "_".join([str(response["data"][0].get(x)) for x in list(template["source"]["group_by"])])
+            persuasion_obj["p_id"] = "%s_%s_%s" % (template["type"], template["sub_type"], p_id)
+            persuasion_obj["status"] = PERSUASION_STATUS[0]
 
             persuasion_obj["UUID"] = str(uuid.uuid1())
             persuasion_obj["title"] = template["title"]
@@ -66,6 +65,32 @@ class PersuasionBuilder:
             logger.error("Exception is creating persuasion object - " + repr(e))
 
         return persuasion_obj
+
+    @staticmethod
+    def update_persuasion(old_persuasion, response):
+
+        new_persuasion = next((p for p in response if p["p_id"] == old_persuasion["p_id"]), None)
+
+        # Case 1st if persuasion doesn't exist
+        if not new_persuasion:
+            old_persuasion["modified_on"] = str(datetime.datetime.now())
+            old_persuasion["latest_event_source"] = new_persuasion["latest_event_source"]
+            old_persuasion["status"] = PERSUASION_STATUS[3]
+            return old_persuasion
+
+        # Case 2nd If it's expired
+        expiry_date = datetime.datetime.strptime(old_persuasion["expiry_date"], DATE_FORMAT)
+
+        new_persuasion["expiry_date"] = old_persuasion["expiry_date"]
+        new_persuasion["created_on"] = old_persuasion["created_on"]
+        new_persuasion["event_source"] = old_persuasion["event_source"]
+
+        if datetime.datetime.today() > expiry_date:
+            new_persuasion["status"] = PERSUASION_STATUS[2]
+        else:
+            # Case 3rd If it's updated
+            new_persuasion["status"] = PERSUASION_STATUS[1]
+        return new_persuasion
 
     @classmethod
     def publish_to_watson_kafka(cls, persuasion):

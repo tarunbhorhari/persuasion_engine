@@ -3,7 +3,7 @@ import logging
 import elasticsearch
 from elasticsearch import Elasticsearch
 
-from settings.app_constants import DYNAMIC_DATA_ELASTIC_SEARCH, PERSUASION_ES_INDEX
+from settings.constants import DYNAMIC_DATA_ELASTIC_SEARCH, PERSUASION_ES_INDEX
 
 logger = logging.getLogger("persuasion_engine")
 

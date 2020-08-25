@@ -38,19 +38,14 @@ class PersuasionEngine:
             if not p_id:
                 return jsonify(dict(status="failure", error="Please provide persuasion id"))
             es = ElasticSearch()
-            persuasion = es.get_persuasion(p_id)
-            if persuasion:
-                request_data["data"] = persuasion["meta"].get("event_packet")
-                response = PersuasionProcessor.process(request_data)
-                # TODO - Persuasion Diff logic
-                if response:
-                    if response[0]["p_id"] == p_id:
-                        response[0]["status"] = "UPDATED"
-                    # TODO - Add expiry logic
-                else:
-                    response[0]["status"] = "RESOLVED"
-                persuasion = response[0]
-            PersuasionBuilder.publish_to_kafka(response, request.args)
+            existing_persuasion = es.get_persuasion(p_id)
+
+            # Copying event_packet from existing persuasion
+            request_data["data"] = existing_persuasion["meta"].get("event_packet")
+            response = PersuasionProcessor.process(request_data)
+
+            persuasion = PersuasionBuilder.update_persuasion(existing_persuasion, response)
+            PersuasionBuilder.publish_to_kafka([persuasion], request.args)
 
         except Exception as e:
             error_msg = "Getting persuasion details - " + repr(e)

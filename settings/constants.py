@@ -36,3 +36,8 @@ DYNAMIC_DATA_ELASTIC_SEARCH = {
 }
 
 PERSUASION_ES_INDEX = "persuasions_test"
+PERSUASION_STATUS = [
+    "NEW", "UPDATED", "EXPIRED", "RESOLVED"
+]
+
+DATE_FORMAT = "%Y-%m-%d %H:%M:%S.%f"
