@@ -1,6 +1,6 @@
 import logging
 
-from controller.persuasion_engine import persuasion_engine
+from controller.persuasion_blueprint import persuasion_engine
 from controller.sample import sample
 from settings import app
 

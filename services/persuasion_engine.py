@@ -6,14 +6,51 @@ from datetime import timedelta
 from itertools import groupby
 from operator import itemgetter
 
-from settings.constants import KAFKA_SERVER, PERSUASION_STATUS, DATE_FORMAT
-from utils.kafka_producer import Producer
+from databases.mysql import MYSQL
+from services.config_keeper import ConfigKeeperAPI
+from settings.constants import PERSUASION_STATUS, DATE_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
+    TEMPLATE_CHOICES
 from utils.utils import Utils
 
 logger = logging.getLogger("persuasion_engine")
 
 
-class PersuasionBuilder:
+class PersuasionEngine:
+    TEMPLATES = ConfigKeeperAPI.get_config(CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY)
+
+    @staticmethod
+    def process(request_data):
+        # base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/templates/"
+        # file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
+        # TODO - Add request data validations if any
+
+        sub_type = request_data.get("sub_type")
+        persuasion_type = request_data.get("type")
+        templates = [PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))] if sub_type else [
+            PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type)) for sub_type in
+            TEMPLATE_CHOICES[persuasion_type] if PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))]
+
+        persuasion_resp = []
+        logger.info("Processing persuasion config")
+        # with open(file_path) as persuasion_template:
+        for template in templates:
+            #template = json.load(persuasion_template)
+            source_data = template.get("source", {})
+            Utils.initialize_mapping(source_data.get("params", dict()), request_data.get("data"))
+            logger.info("Building data source query")
+            query = Utils.query_builder(source_data.get("execute", ""),
+                                        source_data.get("params", dict()), source_data.get('ds_name'))
+            try:
+                # Executing SQL query
+                query_response = json.loads(MYSQL.fetch_data(query))
+
+                persuasion_resp = PersuasionEngine.build_persuasion(request_data, query_response, template)
+            except Exception as e:
+                logger.error("Exception while processing persuasion config - " + repr(e))
+                raise e
+
+        return persuasion_resp
+
     @staticmethod
     def build_persuasion(body, query_resp, template):
         persuasions = []
@@ -36,11 +73,13 @@ class PersuasionBuilder:
 
             for k, v in groupby(data, grouper):
                 response["data"] = list(v)
-                persuasion = PersuasionBuilder.create_persuasion_object(response, template)
+                persuasion = PersuasionEngine.create_persuasion_object(response, template)
                 persuasions.append(persuasion)
 
         except Exception as e:
             logger.error("Exception while building persuasions" + repr(e))
+            raise e
+
         return persuasions
 
     @classmethod
@@ -63,6 +102,7 @@ class PersuasionBuilder:
             persuasion_obj["workflow_id"] = template.get("persuasions", {}).get("wf_name")
         except Exception as e:
             logger.error("Exception is creating persuasion object - " + repr(e))
+            raise e
 
         return persuasion_obj
 
@@ -91,39 +131,3 @@ class PersuasionBuilder:
             # Case 3rd If it's updated
             new_persuasion["status"] = PERSUASION_STATUS[1]
         return new_persuasion
-
-    @classmethod
-    def publish_to_watson_kafka(cls, persuasion):
-        kafka_resp = dict()
-        try:
-            topic = KAFKA_SERVER["TOPIC"]["WATSON"]
-            producer = Producer()
-            key = persuasion["p_id"].encode("utf-8")
-            value = json.dumps(persuasion).encode("utf-8")
-            kafka_resp = producer.push_message(topic, key, value)
-        except Exception as e:
-            logger.critical("Exception while pushing persuasion to kafka - " + repr(e))
-        return kafka_resp
-
-    @classmethod
-    def publish_to_inflow_kafka(cls, persuasion):
-        kafka_resp = dict()
-        try:
-            topic = KAFKA_SERVER["TOPIC"]["INFLOW"]
-            producer = Producer()
-            key = persuasion["p_id"].encode("utf-8")
-            value = json.dumps(persuasion).encode("utf-8")
-            kafka_resp = producer.push_message(topic, key, value)
-        except Exception as e:
-            logger.critical("Exception while pushing persuasion to kafka - " + repr(e))
-        return kafka_resp
-
-    @staticmethod
-    def publish_to_kafka(response, meta):
-        for persuasion in response:
-            if meta.get("push_to_es", "false") == "true":
-                watson_kafka_response = PersuasionBuilder.publish_to_watson_kafka(persuasion)
-                logger.info(watson_kafka_response)
-            if meta.get("push_to_inflow", "false") == "true":
-                inflow_kafka_response = PersuasionBuilder.publish_to_inflow_kafka(persuasion)
-                logger.info(inflow_kafka_response)

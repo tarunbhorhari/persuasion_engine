@@ -12,7 +12,7 @@ logger = logging.getLogger("persuasion_engine")
 
 
 @persuasion_engine.route("/")
-class PersuasionEngine:
+class PersuasionEngineBluePrint:
 
     @staticmethod
     @persuasion_engine.route("/persuasion/create", methods=["POST"])
@@ -20,7 +20,6 @@ class PersuasionEngine:
         try:
             logger.info("Generating persuasion for an event")
             request_data = json.loads(request.data)
-            # TODO - TARUN - Add loop over persuasion_type and run for all the sub_type
             response = PersuasionServices.create(request_data)
         except Exception as e:
             logger.error("Exception while creating persuasion " + repr(e))
