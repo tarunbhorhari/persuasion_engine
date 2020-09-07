@@ -1,9 +1,10 @@
+import json
 import logging
 
 import elasticsearch
 from elasticsearch import Elasticsearch
 
-from settings.constants import DYNAMIC_DATA_ELASTIC_SEARCH, PERSUASION_ES_INDEX
+from settings.constants import PERSUASION_ES_INDEX
 
 logger = logging.getLogger("persuasion_engine")
 
@@ -11,12 +12,12 @@ logger = logging.getLogger("persuasion_engine")
 class ElasticSearch:
     es = None
 
-    def __init__(self):
+    def __init__(self, host, protocol, port):
         self.es = Elasticsearch(
-            [DYNAMIC_DATA_ELASTIC_SEARCH["host"]],
+            [host],
             http_auth=(),
-            scheme=DYNAMIC_DATA_ELASTIC_SEARCH["protocol"],
-            port=DYNAMIC_DATA_ELASTIC_SEARCH["port"]
+            scheme=protocol,
+            port=port
         )
 
     def get_persuasion(self, persuasion_id):
@@ -29,3 +30,16 @@ class ElasticSearch:
         except Exception as e:
             logger.error("Failed to fetch persuasion from ES - " + repr(e))
         return persuasion
+
+    def get_response(self, index, query):
+        response = list()
+        try:
+            es_response = self.es.search(index=index, body=json.dumps(query))
+            if es_response['hits']['hits']:
+                response_hits = es_response['hits']['hits']
+                response = [o['_source'] for o in response_hits]
+        except elasticsearch.NotFoundError:
+            raise Exception("Invalid query - " + query)
+        except Exception as e:
+            logger.error("Failed to fetch query response from ES - " + repr(e))
+        return response

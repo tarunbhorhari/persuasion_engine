@@ -35,6 +35,12 @@ DYNAMIC_DATA_ELASTIC_SEARCH = {
     'port': 443
 }
 
+STATIC_DATA_ELASTIC_SEARCH = {
+    'host': 'vpc-ingoibibo-static-es-rmp73cf7aa4mjpjzaq6qdj7t2a.ap-south-1.es.amazonaws.com',
+    'protocol': 'https',
+    'port': 443
+}
+
 PERSUASION_ES_INDEX = "persuasions_test"
 PERSUASION_STATUS = [
     "NEW", "UPDATED", "EXPIRED", "RESOLVED"

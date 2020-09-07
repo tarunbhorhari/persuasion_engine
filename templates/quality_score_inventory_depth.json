@@ -1,0 +1,74 @@
+{
+  "p_id": "quality_score_inventory_depth_{hotel_id}_{event_date}",
+  "title": "Quality Score - Inventory Depth",
+  "type": "quality_score",
+  "sub_type": "inventory_depth",
+  "description": "This persuasion is to notify the inventory depth",
+  "is_active": true,
+  "tags": [
+    "ingo"
+  ],
+  "expiry_days": 30,
+  "cron_refresh_expression": "* * /5 * * ?",
+  "source": {
+    "ds_name": "lambda",
+    "package": "tarun/inventory_depth",
+    "execute": "test_function",
+    "params": {
+      "hotel_id": "hotel_code",
+      "event_date": "event_date",
+      "bucketed_score_threshold": 1
+    },
+    "static_keys_mapping": {
+      "theme": "ari",
+      "sub_theme": "inventoryDepth"
+    },
+    "keys_mapping": [
+      {
+        "destination": "hotel_id",
+        "exp": "hotelId"
+      },
+      {
+        "destination": "rooms",
+        "exp": "scores"
+      },
+      {
+        "destination": "params",
+        "exp": "params"
+      },
+      {
+        "destination": "avg_bucketed",
+        "exp": "avgBucketed"
+      },
+      {
+        "destination": "event_date",
+        "exp": "eventDate"
+      }
+    ]
+  },
+  "workflow": {
+    "name": "WFInventorySoldOut",
+    "consumers": {}
+  },
+  "events": {
+    "on_start": {
+      "attributes": {
+        "messages": "Sold out persuasion started!!!"
+      },
+      "wf_name": [
+        "slack_notification",
+        "whatsapp"
+      ]
+    },
+    "on_data_fetch": "",
+    "on_complete": {
+      "attributes": {
+        "messages": "Sold out persuasion completed!!!"
+      },
+      "wf_name": [
+        "slack_notification",
+        "whatsapp"
+      ]
+    }
+  }
+}

@@ -3,16 +3,20 @@ import datetime
 
 class Utils:
     @staticmethod
-    def query_builder(query, query_param, source):
-        if source in ["es", "mysql"] and isinstance(query, str):
-            return query.format(**query_param)
+    def format_data(value, params):
+        if isinstance(value, str):
+            return value.format(**params)
         return None
 
     @staticmethod
-    def initialize_mapping(value, data):
-        locals().update(data)
-        for k, v in value.items():
-            value[k] = eval(str(v))
+    def evaluate_data(value, params):
+        locals().update(params)
+        if isinstance(value, dict):
+            for k, v in value.items():
+                value[k] = eval(str(v))
+        elif isinstance(value, str):
+            value = eval(value)
+        return value
 
     @staticmethod
     def datetime_serializer():
@@ -42,15 +46,13 @@ class Utils:
         result = dict()
         if not data:
             return result
-        for key, value in consumers.items():
-            attribute_template = value["attributes"][0] if value["attributes"] else dict()
-            attributes = []
+        consumers_copy = dict(consumers)
+        for key, value in consumers_copy.items():
+            attribute_template = value["attributes"] if value["attributes"] else dict()
+            attribute = dict()
             if attribute_template:
-                for row_data in data:
-                    attribute = dict()
-                    Utils.update_data_dynamically(attribute_template, row_data, attribute)
-                    attributes.append(attribute)
-            value["attributes"] = attributes
+                Utils.update_data_dynamically(attribute_template, data, attribute)
+            value["attributes"] = attribute
             result[key] = value
         return result
 

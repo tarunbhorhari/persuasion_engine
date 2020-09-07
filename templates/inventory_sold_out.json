@@ -1,4 +1,5 @@
 {
+  "p_id": "inventory_sold_out_{hotel_id}_{room_code}_{checkin_date}",
   "title": "No Inventory - Room Sold Out",
   "type": "inventory",
   "sub_type": "sold_out",
@@ -8,6 +9,7 @@
     "ingo"
   ],
   "expiry_days": 30,
+  "cron_refresh_expression": "* * /5 * * ?",
   "source": {
     "ds_name": "mysql",
     "execute": "select a.available, a.booked, a.blocked, a.room_code, a.idate, b.roomtype, b.noofrooms, b.roomtypename, c.hotelcode from hotels_inventorymanager3 a join hotels_roomdetail b on (a.room_code = b.roomtypecode) join hotels_hoteldetail c on (c.id = b.hotel_id) where b.hotel_id='{hotel_id}' and idate='{current_date}' and b.isActive={is_active} and available={avail_threshold} and blocked={blocked}",
@@ -18,6 +20,7 @@
       "avail_threshold": 0,
       "blocked": 0
     },
+    "static_keys_mapping": {},
     "keys_mapping": [
       {
         "destination": "hotel_id",
@@ -47,23 +50,18 @@
         "destination": "current_booked",
         "exp": "booked"
       }
-    ],
-    "group_by": [
-      "hotel_id"
     ]
   },
-  "persuasions": {
-    "wf_name": "WFInventorySoldOut",
+  "workflow": {
+    "name": "WFInventorySoldOut",
     "consumers": {
       "firebase": {
         "is_active": false,
-        "attributes": [
-          {
-            "redirect_link": "/extranet/#inventory",
-            "cta_botton_name": "Update Inventory",
-            "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
-          }
-        ]
+        "attributes": {
+          "redirect_link": "/extranet/#inventory",
+          "cta_botton_name": "Update Inventory",
+          "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
+        }
       }
     }
   },
