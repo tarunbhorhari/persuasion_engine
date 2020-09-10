@@ -1,4 +1,4 @@
-#!/Users/tarun.bhorhari/projects/persuasion_engine/env/bin/python
+#!/Users/custom_lambda.bhorhari/projects/persuasion_engine/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -56,7 +56,7 @@
     "name": "WFInventorySoldOut",
     "consumers": {
       "firebase": {
-        "is_active": false,
+        "is_active": true,
         "attributes": {
           "redirect_link": "/extranet/#inventory",
           "cta_botton_name": "Update Inventory",

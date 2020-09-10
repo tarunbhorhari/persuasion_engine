@@ -1,5 +1,5 @@
 import datetime
-
+import copy
 
 class Utils:
     @staticmethod
@@ -46,14 +46,13 @@ class Utils:
         result = dict()
         if not data:
             return result
-        consumers_copy = dict(consumers)
-        for key, value in consumers_copy.items():
+        for key, value in consumers.items():
             attribute_template = value["attributes"] if value["attributes"] else dict()
             attribute = dict()
             if attribute_template:
                 Utils.update_data_dynamically(attribute_template, data, attribute)
-            value["attributes"] = attribute
-            result[key] = value
+            result[key] = copy.deepcopy(value)
+            result[key]["attributes"] = attribute
         return result
 
     @classmethod

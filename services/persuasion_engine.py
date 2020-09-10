@@ -1,5 +1,4 @@
 import json
-import json
 import logging
 import uuid
 from datetime import timedelta
@@ -22,6 +21,7 @@ class PersuasionEngine:
 
     @staticmethod
     def process(request_data):
+        # This code is to read template from local
         base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/templates/"
         file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
         # TODO - Add request data validations if any
@@ -34,14 +34,14 @@ class PersuasionEngine:
 
         persuasion_resp = []
         logger.info("Processing persuasion config")
+        # for template in templates:
         with open(file_path) as persuasion_template:
-            # for template in templates:
             template = json.load(persuasion_template)
             source_data = template.get("source", {})
             Utils.evaluate_data(source_data.get("params", dict()), request_data.get("data"))
 
             try:
-                source_resp = PersuasionEngine.get_source_response(source_data)
+                source_resp = PersuasionEngine.get_source_response(source_data, request_data)
                 persuasion_resp = PersuasionEngine.build_persuasion(request_data, source_resp,
                                                                     template) if source_resp else list()
             except Exception as e:
@@ -134,23 +134,24 @@ class PersuasionEngine:
         return new_persuasion
 
     @staticmethod
-    def get_source_response(source_data):
+    def get_source_response(source_data, request_data):
         response = None
         logger.info("Fetching data source response")
         ds_name = source_data.get('ds_name')
         if ds_name == "mysql":
             query = Utils.format_data(source_data.get("execute", ""), source_data.get("params", dict()))
-            # Executing SQL query
             response = json.loads(MYSQL.fetch_data(query))
+
         elif ds_name == "es":
             query = Utils.evaluate_data(source_data.get("execute", ""), source_data.get("params", dict()))
             es = ElasticSearch(STATIC_DATA_ELASTIC_SEARCH["host"], STATIC_DATA_ELASTIC_SEARCH["protocol"],
                                STATIC_DATA_ELASTIC_SEARCH["port"])
             response = es.get_response(source_data.get("index", ""), query)
+
         elif ds_name == "lambda":
             package = source_data.get("package", "").replace("/", ".")
             name = source_data.get("execute", "")
             execute = getattr(__import__(package, fromlist=[name]), name)
-            response = execute(source_data.get("params"))
+            response = execute(request_data, source_data.get("params"))
 
         return response
