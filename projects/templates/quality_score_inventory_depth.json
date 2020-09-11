@@ -12,7 +12,7 @@
   "cron_refresh_expression": "* * /5 * * ?",
   "source": {
     "ds_name": "lambda",
-    "package": "custom_lambda/inventory_depth",
+    "package": "projects/custom_lambda/quality_score/inventory_depth",
     "execute": "fetch_persuasions",
     "params": {
       "hotel_id": "hotel_code",

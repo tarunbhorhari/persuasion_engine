@@ -22,7 +22,7 @@ class PersuasionEngine:
     @staticmethod
     def process(request_data):
         # This code is to read template from local
-        base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/templates/"
+        base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/projects/templates/"
         file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
         # TODO - Add request data validations if any
 
