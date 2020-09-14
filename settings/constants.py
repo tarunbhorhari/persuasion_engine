@@ -48,7 +48,8 @@ PERSUASION_STATUS = [
     "NEW", "UPDATED", "EXPIRED", "RESOLVED"
 ]
 
-DATE_FORMAT = "%Y-%m-%d %H:%M:%S.%f"
+DATE_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+DATE_FORMAT = "%Y-%m-%d"
 TEAMS_NOTIFICATION_URL = "https://outlook.office.com/webhook/eed8c571-d7e7-4efa-934b-7618a7d2845a@268b4680-2b9f-4060-8038-d5f6b23352bf/IncomingWebhook/a74dee06c7744153b4f15d2a659a762a/a013704c-99ce-4d74-9d85-bfbc0cc8acc2"
 MAX_WORKERS = 20
 

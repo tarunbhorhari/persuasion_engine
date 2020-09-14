@@ -10,10 +10,4 @@ To start working on this project, you should try the below steps
 ```
 
 
-
-
-
-
-
-
 Thanks Ironic

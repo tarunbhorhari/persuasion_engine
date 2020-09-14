@@ -28,9 +28,13 @@ def listen_kill_server():
 
 @consumer.handle(KAFKA_SERVER["TOPIC"]["PERSUASION"])
 def kafka_consumer_listener(con):
+    """
+     Watson kafka consumer to create persuasions on real time
+    :param con: Event packet
+    :return: None
+    """
     try:
         data = json.loads(con.value)
-        # TODO - Need to change the below logic
         response = PersuasionServices.create(data)
         logger.info("consumed {} from persuasion-test2".format(con.value))
 

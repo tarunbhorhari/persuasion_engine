@@ -11,6 +11,12 @@ class ConfigKeeperAPI:
 
     @staticmethod
     def get_config(service_name, category):
+        """
+
+        :param service_name: CK service name
+        :param category: CK category
+        :return: Persuasion templates
+        """
         logger.info("Fetching templates for " + service_name + " from ConfigKeeper...")
         templates = dict()
         try:

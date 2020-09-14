@@ -37,6 +37,12 @@ class KafkaServices:
 
     @staticmethod
     def publish_to_kafka(response, args):
+        """
+        Common function to publish persuasions on multiple kafka
+        :param response:
+        :param args:
+        :return:
+        """
         for persuasion in response:
             if args.get("push_to_es", "false") == "true":
                 watson_kafka_response = KafkaServices.publish_to_watson_kafka(persuasion)

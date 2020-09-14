@@ -10,5 +10,9 @@ class Routes:
 
     @staticmethod
     def configure_routes():
+        """
+        This will register API routes
+        :return:
+        """
         logger.info("Configuring API routes")
         app.register_blueprint(persuasion_engine)

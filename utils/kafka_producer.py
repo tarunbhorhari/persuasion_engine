@@ -23,6 +23,12 @@ class Producer:
         logger.error(message)
 
     def push_message(self, topic, key, value):
+        """
+        :param topic:
+        :param key:
+        :param value:
+        :return: data
+        """
 
         future = self.producer.send(topic, key=key, value=value).add_callback(self.on_success).add_errback(
             self.on_failure)

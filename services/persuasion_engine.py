@@ -6,8 +6,8 @@ from datetime import timedelta
 from databases.elasticsearch import ElasticSearch
 from databases.mysql import MYSQL
 from services.config_keeper import ConfigKeeperAPI
-from settings.constants import PERSUASION_STATUS, DATE_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
-    STATIC_DATA_ELASTIC_SEARCH
+from settings.constants import PERSUASION_STATUS, DATE_TIME_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
+    STATIC_DATA_ELASTIC_SEARCH, TEMPLATE_CHOICES
 from utils.utils import *
 
 # from itertools import groupby
@@ -21,22 +21,30 @@ class PersuasionEngine:
 
     @staticmethod
     def process(request_data):
+        """
+        Common function to create all type of persuasion
+        :param request_data: Event packet
+        :return: Persuasion Object
+        """
+
         # This code is to read template from local
-        base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/projects/templates/"
-        file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
+        # base_path = "/Users/tarun.bhorhari/projects/persuasion_engine/projects/templates/"
+        # file_path = "%s%s_%s.json" % (base_path, request_data.get("type"), request_data.get("sub_type"))
         # TODO - Add request data validations if any
 
-        # sub_type = request_data.get("sub_type")
-        # persuasion_type = request_data.get("type")
-        # templates = [PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))] if sub_type else [
-        #     PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type)) for sub_type in
-        #     TEMPLATE_CHOICES[persuasion_type] if PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))]
+        sub_type = request_data.get("sub_type")
+        persuasion_type = request_data.get("type")
+        # Fetching persuasion configs here
+        templates = [PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))] if sub_type else [
+            PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type)) for sub_type in
+            TEMPLATE_CHOICES[persuasion_type] if PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))]
 
         persuasion_resp = []
         logger.info("Processing persuasion config")
-        # for template in templates:
-        with open(file_path) as persuasion_template:
-            template = json.load(persuasion_template)
+
+        # with open(file_path) as persuasion_template:
+        #     template = json.load(persuasion_template)
+        for template in templates:
             source_data = template.get("source", {})
             Utils.evaluate_data(source_data.get("params", dict()), request_data.get("data"))
 
@@ -52,6 +60,14 @@ class PersuasionEngine:
 
     @staticmethod
     def build_persuasion(body, query_resp, template):
+        """
+
+        :param body: Event packet
+        :param query_resp: Source response
+        :param template: Persuasion config
+        :return: A persuasion
+        """
+
         persuasions = []
         try:
             response = dict()
@@ -63,7 +79,6 @@ class PersuasionEngine:
 
             # Initializing query response to key mapping
             resp = Utils.template_source_keys_mapping(query_resp, template["source"]["keys_mapping"])
-            # response["consumers"] = Utils.render_template_for_wf_consumers(resp, template["workflow"]["consumers"])
 
             # Grouping logic
             # group = template.get("source", {}).get("group_by")
@@ -75,9 +90,9 @@ class PersuasionEngine:
                 response["data"] = data
                 # This will update the static data
                 response["data"].update(template["source"]["static_keys_mapping"])
-
                 response["p_id"] = Utils.format_data(template["p_id"], response["data"])
                 response["consumers"] = Utils.render_template_for_wf_consumers(data, template["workflow"]["consumers"])
+
                 persuasion = PersuasionEngine.create_persuasion_object(response, template)
                 persuasions.append(persuasion)
 
@@ -89,17 +104,25 @@ class PersuasionEngine:
 
     @classmethod
     def create_persuasion_object(cls, response, template):
+        """
+
+        :param response: Raw persuasion
+        :param template: Config
+        :return: Final persuasion object
+        """
         persuasion_obj = dict(response)
         try:
+            today = datetime.datetime.now()
             persuasion_obj["UUID"] = str(uuid.uuid1())
             persuasion_obj["title"] = template["title"]
             persuasion_obj["type"] = template["type"]
             persuasion_obj["sub_type"] = template["sub_type"]
             persuasion_obj["tags"] = template["tags"]
             persuasion_obj["status"] = PERSUASION_STATUS[0]
-            persuasion_obj["created_on"] = str(datetime.datetime.now())
-            persuasion_obj["modified_on"] = str(datetime.datetime.now())
-            persuasion_obj["expiry_date"] = str(timedelta(days=template["expiry_days"]) + datetime.datetime.now())
+            persuasion_obj["created_on"] = str(today.strftime(DATE_TIME_FORMAT))
+            persuasion_obj["modified_on"] = str(today.strftime(DATE_TIME_FORMAT))
+            expiry_date = timedelta(days=template["expiry_days"]) + today
+            persuasion_obj["expiry_date"] = str(expiry_date.strftime(DATE_TIME_FORMAT))
             persuasion_obj["workflow_id"] = template.get("workflow", {}).get("name")
 
         except Exception as e:
@@ -109,24 +132,30 @@ class PersuasionEngine:
 
     @staticmethod
     def update_persuasion(old_persuasion, response):
+        """
+        Generalized logic to refresh persuasion
+        :param old_persuasion: Existing persuasion
+        :param response: New persuasions list
+        :return: Updated persuasion
+        """
 
         new_persuasion = next((p for p in response if p["p_id"] == old_persuasion["p_id"]), None)
-
+        today = datetime.datetime.now()
         # Case 1st if persuasion doesn't exist
         if not new_persuasion:
-            old_persuasion["modified_on"] = str(datetime.datetime.now())
+            old_persuasion["modified_on"] = str(today.strftime(DATE_TIME_FORMAT))
             old_persuasion["latest_event_source"] = new_persuasion["latest_event_source"]
             old_persuasion["status"] = PERSUASION_STATUS[3]
             return old_persuasion
 
         # Case 2nd If it's expired
-        expiry_date = datetime.datetime.strptime(old_persuasion["expiry_date"], DATE_FORMAT)
+        expiry_date = datetime.datetime.strptime(old_persuasion["expiry_date"], DATE_TIME_FORMAT)
 
         new_persuasion["expiry_date"] = old_persuasion["expiry_date"]
         new_persuasion["created_on"] = old_persuasion["created_on"]
         new_persuasion["event_source"] = old_persuasion["event_source"]
 
-        if datetime.datetime.today() > expiry_date:
+        if today > expiry_date:
             new_persuasion["status"] = PERSUASION_STATUS[2]
         else:
             # Case 3rd If it's updated
@@ -135,6 +164,13 @@ class PersuasionEngine:
 
     @staticmethod
     def get_source_response(source_data, request_data):
+        """
+        This function will evaluate the source and send the row in list
+
+        :param source_data: Config source packet
+        :param request_data: Event packet
+        :return: Source response
+        """
         response = None
         logger.info("Fetching data source response")
         ds_name = source_data.get('ds_name')

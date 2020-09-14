@@ -1,39 +1,4 @@
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
 INFO:kafka.conn:Probing node bootstrap-0 broker version
@@ -50,73 +15,14 @@ INFO:persuasion_engine:Generic Persuasion Engine is Running.....
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:31:43] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:32:16] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-ERROR:persuasion_engine:Exception while building persuasionsNameError("name 'hotelId' is not defined")
-ERROR:persuasion_engine:Exception while processing persuasion config - NameError("name 'hotelId' is not defined")
-ERROR:persuasion_engine:Exception while creating persuasion NameError("name 'hotelId' is not defined")
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:46:46] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
-INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
-INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
-INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
-INFO:persuasion_engine:Initialising app level settings
-INFO:persuasion_engine:Configuring API routes
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-ERROR:persuasion_engine:Exception while building persuasionsNameError("name 'hotelId' is not defined")
-ERROR:persuasion_engine:Exception while processing persuasion config - NameError("name 'hotelId' is not defined")
-ERROR:persuasion_engine:Exception while creating persuasion NameError("name 'hotelId' is not defined")
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:47:51] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
@@ -129,102 +35,64 @@ INFO:persuasion_engine:Generic Persuasion Engine is Running.....
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
+INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.432s]
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-ERROR:persuasion_engine:Exception while building persuasionsNameError("name 'eventDate' is not defined")
-ERROR:persuasion_engine:Exception while processing persuasion config - NameError("name 'eventDate' is not defined")
-ERROR:persuasion_engine:Exception while creating persuasion NameError("name 'eventDate' is not defined")
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:50:49] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
+INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.383s]
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
-INFO:persuasion_engine:Processing persuasion config
-INFO:persuasion_engine:Fetching data source response
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-CRITICAL:persuasion_engine:Exception while pushing persuasion to kafka - NoBrokersAvailable()
-INFO:kafka.producer.kafka:Kafka producer closed
-INFO:persuasion_engine:{}
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-CRITICAL:persuasion_engine:Exception while pushing persuasion to kafka - NoBrokersAvailable()
-INFO:kafka.producer.kafka:Kafka producer closed
-INFO:persuasion_engine:{}
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:51:24] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
 INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
 INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
 INFO:persuasion_engine:Initialising app level settings
 INFO:persuasion_engine:Configuring API routes
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:persuasion_engine:Generating persuasion for an event
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
+INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.410s]
+INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
+INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
+INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
+INFO:persuasion_engine:Initialising app level settings
+INFO:persuasion_engine:Configuring API routes
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
+INFO:persuasion_engine:Refreshing persuasions on scheduled basis 
+INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.379s]
+INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
+INFO:persuasion_engine:Fetching templates for persuasion_engine from ConfigKeeper...
+INFO:persuasion_engine:Generic Persuasion Engine is Running..... 
+INFO:persuasion_engine:Initialising app level settings
+INFO:persuasion_engine:Configuring API routes
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:persuasion_engine:Refreshing/Updating persuasions in bulk
+INFO:persuasion_engine:Refreshing persuasions on scheduled basis 
+INFO:elasticsearch:POST https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_search [status:200 request:0.516s]
+INFO:persuasion_engine:Getting updated data of persuasion - quality_score_inventory_depth_45000405199_2020-09-01
+INFO:elasticsearch:GET https://vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com:443/persuasions_test/_doc/quality_score_inventory_depth_45000405199_2020-09-01 [status:200 request:0.391s]
 INFO:persuasion_engine:Processing persuasion config
 INFO:persuasion_engine:Fetching data source response
-INFO:elasticsearch:POST https://vpc-ingoibibo-static-es-rmp73cf7aa4mjpjzaq6qdj7t2a.ap-south-1.es.amazonaws.com:443/qsInventoryDepth/_search [status:200 request:0.372s]
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-CRITICAL:persuasion_engine:Exception while pushing persuasion to kafka - NoBrokersAvailable()
-INFO:kafka.producer.kafka:Kafka producer closed
-INFO:persuasion_engine:{}
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-INFO:kafka.conn:Probing node bootstrap-0 broker version
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
-ERROR:kafka.conn:Connect attempt to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]> returned error 61. Disconnecting.
-INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 61 ECONNREFUSED
-CRITICAL:persuasion_engine:Exception while pushing persuasion to kafka - NoBrokersAvailable()
-INFO:kafka.producer.kafka:Kafka producer closed
-INFO:persuasion_engine:{}
-INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 19:52:58] "[37mPOST /persuasion/create HTTP/1.1[0m" 200 -
+INFO:persuasion_engine:Fetching inventory depths persuasions
+INFO:elasticsearch:POST https://vpc-ingoibibo-static-es-rmp73cf7aa4mjpjzaq6qdj7t2a.ap-south-1.es.amazonaws.com:443/qsInventoryDepth/_search [status:200 request:0.437s]
+INFO:persuasion_engine:Getting inventory depth persuasions from ES
+INFO:persuasion_engine:Refreshing inventory depth persuasions
+INFO:persuasion_engine:Getting inventory depth persuasions from inventory DB (MySQL)
+INFO:persuasion_engine:Returning final inventory depth persuasions
+INFO:werkzeug:127.0.0.1 - - [14/Sep/2020 19:25:11] "[37mGET /persuasion/schedule/refresh?push_to_es=true&push_to_inflow=false&type=quality_score&sub_type=inventory_depth&start_date=2020-09-10 HTTP/1.1[0m" 200 -
 INFO:persuasion_engine:Shutting down Generic Persuasion Engine...
