@@ -59,7 +59,7 @@ class PersuasionEngine:
         return persuasion_resp
 
     @staticmethod
-    def build_persuasion(body, query_resp, template):
+    def build_persuasion(body, source_resp, template):
         """
 
         :param body: Event packet
@@ -78,7 +78,7 @@ class PersuasionEngine:
             response["meta"].update(dict(event_packet=body.get("data", {})))
 
             # Initializing query response to key mapping
-            resp = Utils.template_source_keys_mapping(query_resp, template["source"]["keys_mapping"])
+            resp = Utils.template_source_keys_mapping(source_resp, template["source"]["keys_mapping"])
 
             # Grouping logic
             # group = template.get("source", {}).get("group_by")

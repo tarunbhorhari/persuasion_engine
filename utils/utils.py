@@ -1,5 +1,6 @@
-import datetime
 import copy
+import datetime
+
 
 class Utils:
     @staticmethod
@@ -48,18 +49,18 @@ class Utils:
             return result
         for key, value in consumers.items():
             attribute_template = value["attributes"] if value["attributes"] else dict()
-            attribute = dict()
+            attributes = dict()
             if attribute_template:
-                Utils.update_data_dynamically(attribute_template, data, attribute)
+                Utils.render_template(attribute_template, data, attributes)
             result[key] = copy.deepcopy(value)
-            result[key]["attributes"] = attribute
+            result[key]["attributes"] = attributes
         return result
 
     @classmethod
-    def update_data_dynamically(cls, attribute_template, data, attribute):
-        for k, v in attribute_template.items():
+    def render_template(cls, template, data, response):
+        for k, v in template.items():
             if isinstance(v, dict):
-                attribute[k] = Utils.update_data_dynamically(v, data, attribute.get('k', {}))
+                response[k] = Utils.render_template(v, data, response.get('k', {}))
             else:
-                attribute[k] = v.format(**data) if isinstance(v, str) else v
-        return attribute
+                response[k] = v.format(**data) if isinstance(v, str) else v
+        return response

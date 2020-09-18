@@ -30,15 +30,15 @@ KAFKA_SERVER = {
 }
 
 DYNAMIC_DATA_ELASTIC_SEARCH = {
-    'host': 'vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com',
-    'protocol': 'https',
-    'port': 443
+    "host": "vpc-ingoibibo-analytics-es-4jgoflixwmiwoz7waoejlz4cay.ap-south-1.es.amazonaws.com",
+    "protocol": "https",
+    "port": 443
 }
 
 STATIC_DATA_ELASTIC_SEARCH = {
-    'host': 'vpc-ingoibibo-static-es-rmp73cf7aa4mjpjzaq6qdj7t2a.ap-south-1.es.amazonaws.com',
-    'protocol': 'https',
-    'port': 443
+    "host": "vpc-ingoibibo-static-es-rmp73cf7aa4mjpjzaq6qdj7t2a.ap-south-1.es.amazonaws.com",
+    "protocol": "https",
+    "port": 443
 }
 
 PERSUASION_ES_INDEX = "persuasions_test"
@@ -62,4 +62,11 @@ CONFIG_KEEPER_URL = CONFIG_KEEPER_HOST_PROTOCOL + "://" + CONFIG_KEEPER_HOST + "
 TEMPLATE_CHOICES = {
     "inventory": ["sold_out", "fast_filling"],
     "quality_score": ["inventory_depth", "content_score"]
+}
+
+TEMPLATE_CHANNEL_NAME = "ironic"
+REDIS_SERVER = {
+    "host": "localhost",
+    "port": 6379,
+    "db": 0
 }
