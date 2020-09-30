@@ -6,7 +6,7 @@ from flask import jsonify
 from databases.elasticsearch import ElasticSearch
 from services.kafka_services import KafkaServices
 from services.persuasion_engine import PersuasionEngine
-from settings.constants import DYNAMIC_DATA_ELASTIC_SEARCH, DATE_FORMAT, PERSUASION_ES_INDEX, DATE_TIME_FORMAT
+from settings.dev import DYNAMIC_DATA_ELASTIC_SEARCH, DATE_FORMAT, PERSUASION_ES_INDEX, DATE_TIME_FORMAT
 
 logger = logging.getLogger("persuasion_engine")
 

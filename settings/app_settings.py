@@ -2,7 +2,7 @@ import logging
 
 from databases.redis import CustomRedis, template_handler
 from services.teams_notification import TeamsNotification
-from settings.constants import REDIS_SERVER, TEMPLATE_CHANNEL_NAME
+from settings.dev import REDIS_SERVER, TEMPLATE_CHANNEL_NAME
 from settings.routes import Routes
 
 logger = logging.getLogger("persuasion_engine")

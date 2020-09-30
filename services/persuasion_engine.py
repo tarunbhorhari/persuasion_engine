@@ -6,7 +6,7 @@ from datetime import timedelta
 from databases.elasticsearch import ElasticSearch
 from databases.mysql import MYSQL
 from services.config_keeper import ConfigKeeperAPI
-from settings.constants import PERSUASION_STATUS, DATE_TIME_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
+from settings.dev import PERSUASION_STATUS, DATE_TIME_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
     STATIC_DATA_ELASTIC_SEARCH, TEMPLATE_CHOICES
 from utils.utils import *
 
@@ -45,13 +45,12 @@ class PersuasionEngine:
         # with open(file_path) as persuasion_template:
         #     template = json.load(persuasion_template)
         for template in templates:
-            source_data = template.get("source", {})
+            persuasion_template = copy.deepcopy(template)
+            source_data = persuasion_template.get("source", {})
             Utils.evaluate_data(source_data.get("params", dict()), request_data.get("data"))
 
             try:
-                source_resp = PersuasionEngine.get_source_response(source_data, request_data)
-                persuasion_resp = PersuasionEngine.build_persuasion(request_data, source_resp,
-                                                                    template) if source_resp else list()
+                persuasion_resp = PersuasionEngine.build_persuasion(request_data, source_data, persuasion_template)
             except Exception as e:
                 logger.error("Exception while processing persuasion config - " + repr(e))
                 raise e
@@ -59,7 +58,7 @@ class PersuasionEngine:
         return persuasion_resp
 
     @staticmethod
-    def build_persuasion(body, source_resp, template):
+    def build_persuasion(body, source_data, template):
         """
 
         :param body: Event packet
@@ -69,6 +68,10 @@ class PersuasionEngine:
         """
 
         persuasions = []
+        source_resp = PersuasionEngine.get_source_response(source_data, body)
+        if not source_resp:
+            return persuasions
+
         try:
             response = dict()
             response["event_source"] = body.get("source", "")
@@ -91,7 +94,11 @@ class PersuasionEngine:
                 # This will update the static data
                 response["data"].update(template["source"]["static_keys_mapping"])
                 response["p_id"] = Utils.format_data(template["p_id"], response["data"])
-                response["consumers"] = Utils.render_template_for_wf_consumers(data, template["workflow"]["consumers"])
+
+                # Adding workflow details
+                response["workflow"] = copy.deepcopy(template["workflow"])
+                response["workflow"]["consumers"] = Utils.render_template_for_consumers(data, response["workflow"].get(
+                    "consumers", {}))
 
                 persuasion = PersuasionEngine.create_persuasion_object(response, template)
                 persuasions.append(persuasion)
@@ -123,7 +130,6 @@ class PersuasionEngine:
             persuasion_obj["modified_on"] = str(today.strftime(DATE_TIME_FORMAT))
             expiry_date = timedelta(days=template["expiry_days"]) + today
             persuasion_obj["expiry_date"] = str(expiry_date.strftime(DATE_TIME_FORMAT))
-            persuasion_obj["workflow_id"] = template.get("workflow", {}).get("name")
 
         except Exception as e:
             logger.error("Exception is creating persuasion object - " + repr(e))

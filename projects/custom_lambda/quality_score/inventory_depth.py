@@ -4,7 +4,7 @@ import logging
 
 from databases.elasticsearch import ElasticSearch
 from databases.mysql import MYSQL
-from settings.constants import STATIC_DATA_ELASTIC_SEARCH, INVENTORY_DEPTH_ES_INDEX
+from settings.dev import STATIC_DATA_ELASTIC_SEARCH, INVENTORY_DEPTH_ES_INDEX
 from utils.utils import Utils
 
 logger = logging.getLogger("persuasion_engine")

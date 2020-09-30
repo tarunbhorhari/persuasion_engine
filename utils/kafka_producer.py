@@ -3,26 +3,26 @@ import logging
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-from settings.constants import KAFKA_SERVER
+from settings.dev import KAFKA_SERVER
 
 logger = logging.getLogger("persuasion_engine")
 
 
 class Producer:
-    producer = None
+    producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["host"])
 
-    def __init__(self):
-        self.producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["HOST"])
-
-    def on_success(self):
+    @staticmethod
+    def on_success(args):
         message = "Pushed message to kafka successfully"
         logger.info(message)
 
-    def on_failure(self, e):
+    @staticmethod
+    def on_failure(e):
         message = "Failed to push message to kafka " + repr(e)
         logger.error(message)
 
-    def push_message(self, topic, key, value):
+    @staticmethod
+    def push_message(topic, key, value):
         """
         :param topic:
         :param key:
@@ -30,8 +30,8 @@ class Producer:
         :return: data
         """
 
-        future = self.producer.send(topic, key=key, value=value).add_callback(self.on_success).add_errback(
-            self.on_failure)
+        future = Producer.producer.send(topic, key=key, value=value). \
+            add_callback(Producer.on_success).add_errback(Producer.on_failure)
         data = dict()
         try:
             result = future.get(timeout=60)
@@ -39,5 +39,5 @@ class Producer:
             data['partition'] = result.partition
             data['offset'] = result.offset
         except KafkaError as e:
-            self.on_failure(e)
+            Producer.on_failure(e)
         return data

@@ -17,15 +17,15 @@ DATABASES = {
 }
 
 KAFKA_SERVER = {
-    "HOST": "localhost:9092",
-    "TOPIC": {
-        "PERSUASION": "persuasion-test",
-        "WATSON": "persuasion-test1",
-        "INFLOW": "persuasion-test2"
+    "host": "host.docker.internal:9092",
+    "topic": {
+        "persuasion": "persuasion-test",
+        "watson": "persuasion-test1",
+        "inflow": "persuasion-test2"
 
     },
-    "GROUP": {
-        "PERSUASION": "persuasion"
+    "group": {
+        "persuasion": "persuasion"
     }
 }
 
@@ -64,9 +64,14 @@ TEMPLATE_CHOICES = {
     "quality_score": ["inventory_depth", "content_score"]
 }
 
-TEMPLATE_CHANNEL_NAME = "ironic"
+TEMPLATE_CHANNEL_NAME = "persuasion_engine_templates"
 REDIS_SERVER = {
-    "host": "localhost",
+    "host": "host.docker.internal",
     "port": 6379,
-    "db": 0
+    "db": 12
+}
+
+FLASK = {
+    "host": "0.0.0.0",
+    "port": 5000
 }

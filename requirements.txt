@@ -11,3 +11,4 @@ elasticsearch==7.8.1
 elasticsearch-dsl==7.2.1
 python-dateutil==2.8.1
 redis==3.5.3
+requests

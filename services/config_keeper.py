@@ -2,7 +2,7 @@ import logging
 
 import requests
 import json
-from settings.constants import CONFIG_KEEPER_URL
+from settings.dev import CONFIG_KEEPER_URL
 
 logger = logging.getLogger("persuasion_engine")
 

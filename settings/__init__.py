@@ -3,7 +3,7 @@ import logging
 from flask import Flask
 from flaskext.mysql import MySQL
 
-from settings.constants import app_name, DATABASES
+from settings.dev import app_name, DATABASES
 
 logging.basicConfig(filename="logs/persuasion_engine.log", level=logging.INFO)
 

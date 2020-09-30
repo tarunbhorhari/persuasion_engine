@@ -5,7 +5,7 @@ import logging
 from flask import Blueprint, jsonify, request
 
 from services.persuasion_services import PersuasionServices
-from settings.constants import MAX_WORKERS
+from settings.dev import MAX_WORKERS
 
 persuasion_engine = Blueprint("persuasion_engine", __name__, template_folder="templates")
 logger = logging.getLogger("persuasion_engine")
@@ -13,6 +13,11 @@ logger = logging.getLogger("persuasion_engine")
 
 @persuasion_engine.route("/")
 class PersuasionEngineBluePrint:
+
+    @staticmethod
+    @persuasion_engine.route("/", methods=["GET"])
+    def send_response():
+        return jsonify("Hi Ironic, you have landed successfully here !!!")
 
     @staticmethod
     @persuasion_engine.route("/persuasion/create", methods=["POST"])

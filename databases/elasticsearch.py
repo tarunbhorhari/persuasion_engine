@@ -4,7 +4,7 @@ import logging
 import elasticsearch
 from elasticsearch import Elasticsearch
 
-from settings.constants import PERSUASION_ES_INDEX
+from settings.dev import PERSUASION_ES_INDEX
 
 logger = logging.getLogger("persuasion_engine")
 

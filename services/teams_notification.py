@@ -3,7 +3,7 @@ import logging
 
 import requests
 
-from settings.constants import TEAMS_NOTIFICATION_URL
+from settings.dev import TEAMS_NOTIFICATION_URL
 
 logger = logging.getLogger("persuasion_engine")
 

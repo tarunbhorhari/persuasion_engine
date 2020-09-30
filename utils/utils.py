@@ -43,7 +43,7 @@ class Utils:
         return results
 
     @staticmethod
-    def render_template_for_wf_consumers(data, consumers):
+    def render_template_for_consumers(data, consumers):
         result = dict()
         if not data:
             return result

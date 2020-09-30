@@ -1,7 +1,7 @@
 import json
 import logging
 
-from settings.constants import KAFKA_SERVER
+from settings.dev import KAFKA_SERVER
 from utils.kafka_producer import Producer
 
 logger = logging.getLogger("persuasion_engine")
@@ -13,11 +13,10 @@ class KafkaServices:
     def publish_to_watson_kafka(cls, persuasion):
         kafka_resp = dict()
         try:
-            topic = KAFKA_SERVER["TOPIC"]["WATSON"]
-            producer = Producer()
+            topic = KAFKA_SERVER["topic"]["watson"]
             key = persuasion["p_id"].encode("utf-8")
             value = json.dumps(persuasion).encode("utf-8")
-            kafka_resp = producer.push_message(topic, key, value)
+            kafka_resp = Producer.push_message(topic, key, value)
         except Exception as e:
             logger.critical("Exception while pushing persuasion to kafka - " + repr(e))
         return kafka_resp
@@ -26,11 +25,10 @@ class KafkaServices:
     def publish_to_inflow_kafka(cls, persuasion):
         kafka_resp = dict()
         try:
-            topic = KAFKA_SERVER["TOPIC"]["INFLOW"]
-            producer = Producer()
+            topic = KAFKA_SERVER["topic"]["inflow"]
             key = persuasion["p_id"].encode("utf-8")
             value = json.dumps(persuasion).encode("utf-8")
-            kafka_resp = producer.push_message(topic, key, value)
+            kafka_resp = Producer.push_message(topic, key, value)
         except Exception as e:
             logger.critical("Exception while pushing persuasion to kafka - " + repr(e))
         return kafka_resp
