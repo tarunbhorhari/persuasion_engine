@@ -1,8 +1,9 @@
+import json
 import logging
 
 import requests
-import json
-from settings.dev import CONFIG_KEEPER_URL
+
+import settings
 
 logger = logging.getLogger("persuasion_engine")
 
@@ -20,7 +21,7 @@ class ConfigKeeperAPI:
         logger.info("Fetching templates for " + service_name + " from ConfigKeeper...")
         templates = dict()
         try:
-            url = CONFIG_KEEPER_URL + service_name + "&category=[\"" + category + "\"]"
+            url = settings.CONFIG_KEEPER_URL + service_name + "&category=[\"" + category + "\"]"
             response = requests.get(url)
 
             if response.status_code == 200:

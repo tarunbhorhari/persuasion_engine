@@ -1,7 +1,7 @@
 import json
 import logging
 
-from settings.dev import KAFKA_SERVER
+import settings
 from utils.kafka_producer import Producer
 
 logger = logging.getLogger("persuasion_engine")
@@ -13,7 +13,7 @@ class KafkaServices:
     def publish_to_watson_kafka(cls, persuasion):
         kafka_resp = dict()
         try:
-            topic = KAFKA_SERVER["topic"]["watson"]
+            topic = settings.KAFKA_SERVER["topic"]["watson"]
             key = persuasion["p_id"].encode("utf-8")
             value = json.dumps(persuasion).encode("utf-8")
             kafka_resp = Producer.push_message(topic, key, value)
@@ -25,7 +25,7 @@ class KafkaServices:
     def publish_to_inflow_kafka(cls, persuasion):
         kafka_resp = dict()
         try:
-            topic = KAFKA_SERVER["topic"]["inflow"]
+            topic = settings.KAFKA_SERVER["topic"]["inflow"]
             key = persuasion["p_id"].encode("utf-8")
             value = json.dumps(persuasion).encode("utf-8")
             kafka_resp = Producer.push_message(topic, key, value)

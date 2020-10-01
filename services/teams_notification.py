@@ -3,7 +3,7 @@ import logging
 
 import requests
 
-from settings.dev import TEAMS_NOTIFICATION_URL
+import settings
 
 logger = logging.getLogger("persuasion_engine")
 
@@ -11,7 +11,7 @@ logger = logging.getLogger("persuasion_engine")
 class TeamsNotification:
     facts = None
     title = None
-    URL = TEAMS_NOTIFICATION_URL
+    URL = settings.TEAMS_NOTIFICATION_URL
     HEADERS = {
         'Content-Type': 'application/json',
     }

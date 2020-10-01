@@ -4,7 +4,7 @@ import logging
 import elasticsearch
 from elasticsearch import Elasticsearch
 
-from settings.dev import PERSUASION_ES_INDEX
+import settings
 
 logger = logging.getLogger("persuasion_engine")
 
@@ -23,7 +23,7 @@ class ElasticSearch:
     def get_persuasion(self, persuasion_id):
         persuasion = None
         try:
-            es_response = self.es.get(index=PERSUASION_ES_INDEX, id=persuasion_id)
+            es_response = self.es.get(index=settings.PERSUASION_ES_INDEX, id=persuasion_id)
             persuasion = es_response.get("_source")
         except elasticsearch.NotFoundError:
             raise Exception("Invalid persuasion id - " + persuasion_id)

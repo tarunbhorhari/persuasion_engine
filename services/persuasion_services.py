@@ -3,10 +3,10 @@ import logging
 
 from flask import jsonify
 
+import settings
 from databases.elasticsearch import ElasticSearch
 from services.kafka_services import KafkaServices
 from services.persuasion_engine import PersuasionEngine
-from settings.dev import DYNAMIC_DATA_ELASTIC_SEARCH, DATE_FORMAT, PERSUASION_ES_INDEX, DATE_TIME_FORMAT
 
 logger = logging.getLogger("persuasion_engine")
 
@@ -40,8 +40,9 @@ class PersuasionServices:
             logger.info("Getting updated data of persuasion - " + p_id)
             if not p_id:
                 return jsonify(dict(status="failure", error="Please provide persuasion id"))
-            es = ElasticSearch(DYNAMIC_DATA_ELASTIC_SEARCH["host"], DYNAMIC_DATA_ELASTIC_SEARCH["protocol"],
-                               DYNAMIC_DATA_ELASTIC_SEARCH["port"])
+            es = ElasticSearch(settings.DYNAMIC_DATA_ELASTIC_SEARCH["host"],
+                               settings.DYNAMIC_DATA_ELASTIC_SEARCH["protocol"],
+                               settings.DYNAMIC_DATA_ELASTIC_SEARCH["port"])
             existing_persuasion = es.get_persuasion(p_id)
             request_data["type"] = existing_persuasion.get("type")
             request_data["sub_type"] = existing_persuasion.get("sub_type")
@@ -66,20 +67,21 @@ class PersuasionServices:
         today = datetime.datetime.now()
         try:
             logger.info("Refreshing persuasions on scheduled basis ")
-            start_date = datetime.datetime.strptime(args.get("start_date"), DATE_FORMAT).strftime(
-                DATE_TIME_FORMAT) if args.get("start_date") else str(today.strftime(DATE_TIME_FORMAT))
+            start_date = datetime.datetime.strptime(args.get("start_date"), settings.DATE_FORMAT).strftime(
+                settings.DATE_TIME_FORMAT) if args.get("start_date") else str(today.strftime(settings.DATE_TIME_FORMAT))
 
-            end_date = datetime.datetime.strptime(args.get("end_date"), DATE_FORMAT).strftime(
-                DATE_TIME_FORMAT) if args.get("end_date") else str(today.strftime(DATE_TIME_FORMAT))
+            end_date = datetime.datetime.strptime(args.get("end_date"), settings.DATE_FORMAT).strftime(
+                settings.DATE_TIME_FORMAT) if args.get("end_date") else str(today.strftime(settings.DATE_TIME_FORMAT))
 
             query = {"_source": ["p_id", "type", "sub_type"],
                      "query": {"bool": {"must": [{"term": {"type": {"value": args["type"]}}},
                                                  {"term": {"sub_type": {"value": args["sub_type"]}}},
                                                  {"range": {"created_on": {"gte": start_date, "lte": end_date}
                                                             }}]}}}
-            es = ElasticSearch(DYNAMIC_DATA_ELASTIC_SEARCH["host"], DYNAMIC_DATA_ELASTIC_SEARCH["protocol"],
-                               DYNAMIC_DATA_ELASTIC_SEARCH["port"])
-            response = es.get_response(PERSUASION_ES_INDEX, query)
+            es = ElasticSearch(settings.DYNAMIC_DATA_ELASTIC_SEARCH["host"],
+                               settings.DYNAMIC_DATA_ELASTIC_SEARCH["protocol"],
+                               settings.DYNAMIC_DATA_ELASTIC_SEARCH["port"])
+            response = es.get_response(settings.PERSUASION_ES_INDEX, query)
             return response
         except Exception as e:
             raise e

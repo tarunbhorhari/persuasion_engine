@@ -4,8 +4,8 @@ import logging
 
 from flask import Blueprint, jsonify, request
 
+import settings
 from services.persuasion_services import PersuasionServices
-from settings.dev import MAX_WORKERS
 
 persuasion_engine = Blueprint("persuasion_engine", __name__, template_folder="templates")
 logger = logging.getLogger("persuasion_engine")
@@ -74,7 +74,7 @@ class PersuasionEngineBluePrint:
         logger.info("Creating persuasions in bulk")
         try:
             request_data = json.loads(request.data)
-            with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=settings.MAX_WORKERS) as executor:
                 {executor.submit(PersuasionServices.create, data): data for data in request_data}
 
             return jsonify(
@@ -137,7 +137,7 @@ class PersuasionEngineBluePrint:
         try:
             request_data = json.loads(request.data)
             args = request.args
-            with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=settings.MAX_WORKERS) as executor:
                 {executor.submit(PersuasionServices.refresh, data, args): data for data in request_data}
 
             return jsonify(
@@ -166,7 +166,7 @@ class PersuasionEngineBluePrint:
 
             persuasions_request = PersuasionServices.get_persuasions_request_from_es(args)
 
-            with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=settings.MAX_WORKERS) as executor:
                 {executor.submit(PersuasionServices.refresh, data, args): data for data in persuasions_request}
 
             return jsonify(

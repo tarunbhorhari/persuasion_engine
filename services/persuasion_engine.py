@@ -3,11 +3,10 @@ import logging
 import uuid
 from datetime import timedelta
 
+import settings
 from databases.elasticsearch import ElasticSearch
 from databases.mysql import MYSQL
 from services.config_keeper import ConfigKeeperAPI
-from settings.dev import PERSUASION_STATUS, DATE_TIME_FORMAT, CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY, \
-    STATIC_DATA_ELASTIC_SEARCH, TEMPLATE_CHOICES
 from utils.utils import *
 
 # from itertools import groupby
@@ -17,7 +16,7 @@ logger = logging.getLogger("persuasion_engine")
 
 
 class PersuasionEngine:
-    TEMPLATES = ConfigKeeperAPI.get_config(CONFIG_KEEPER_SERVICE_NAME, CONFIG_KEEPER_CATEGORY)
+    TEMPLATES = ConfigKeeperAPI.get_config(settings.CONFIG_KEEPER_SERVICE_NAME, settings.CONFIG_KEEPER_CATEGORY)
 
     @staticmethod
     def process(request_data):
@@ -37,7 +36,8 @@ class PersuasionEngine:
         # Fetching persuasion configs here
         templates = [PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))] if sub_type else [
             PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type)) for sub_type in
-            TEMPLATE_CHOICES[persuasion_type] if PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))]
+            settings.TEMPLATE_CHOICES[persuasion_type] if
+            PersuasionEngine.TEMPLATES.get("%s_%s" % (persuasion_type, sub_type))]
 
         persuasion_resp = []
         logger.info("Processing persuasion config")
@@ -125,11 +125,11 @@ class PersuasionEngine:
             persuasion_obj["type"] = template["type"]
             persuasion_obj["sub_type"] = template["sub_type"]
             persuasion_obj["tags"] = template["tags"]
-            persuasion_obj["status"] = PERSUASION_STATUS[0]
-            persuasion_obj["created_on"] = str(today.strftime(DATE_TIME_FORMAT))
-            persuasion_obj["modified_on"] = str(today.strftime(DATE_TIME_FORMAT))
+            persuasion_obj["status"] = settings.PERSUASION_STATUS[0]
+            persuasion_obj["created_on"] = str(today.strftime(settings.DATE_TIME_FORMAT))
+            persuasion_obj["modified_on"] = str(today.strftime(settings.DATE_TIME_FORMAT))
             expiry_date = timedelta(days=template["expiry_days"]) + today
-            persuasion_obj["expiry_date"] = str(expiry_date.strftime(DATE_TIME_FORMAT))
+            persuasion_obj["expiry_date"] = str(expiry_date.strftime(settings.DATE_TIME_FORMAT))
 
         except Exception as e:
             logger.error("Exception is creating persuasion object - " + repr(e))
@@ -149,23 +149,23 @@ class PersuasionEngine:
         today = datetime.datetime.now()
         # Case 1st if persuasion doesn't exist
         if not new_persuasion:
-            old_persuasion["modified_on"] = str(today.strftime(DATE_TIME_FORMAT))
+            old_persuasion["modified_on"] = str(today.strftime(settings.DATE_TIME_FORMAT))
             old_persuasion["latest_event_source"] = new_persuasion["latest_event_source"]
-            old_persuasion["status"] = PERSUASION_STATUS[3]
+            old_persuasion["status"] = settings.PERSUASION_STATUS[3]
             return old_persuasion
 
         # Case 2nd If it's expired
-        expiry_date = datetime.datetime.strptime(old_persuasion["expiry_date"], DATE_TIME_FORMAT)
+        expiry_date = datetime.datetime.strptime(old_persuasion["expiry_date"], settings.DATE_TIME_FORMAT)
 
         new_persuasion["expiry_date"] = old_persuasion["expiry_date"]
         new_persuasion["created_on"] = old_persuasion["created_on"]
         new_persuasion["event_source"] = old_persuasion["event_source"]
 
         if today > expiry_date:
-            new_persuasion["status"] = PERSUASION_STATUS[2]
+            new_persuasion["status"] = settings.PERSUASION_STATUS[2]
         else:
             # Case 3rd If it's updated
-            new_persuasion["status"] = PERSUASION_STATUS[1]
+            new_persuasion["status"] = settings.PERSUASION_STATUS[1]
         return new_persuasion
 
     @staticmethod
@@ -186,8 +186,9 @@ class PersuasionEngine:
 
         elif ds_name == "es":
             query = Utils.evaluate_data(source_data.get("execute", ""), source_data.get("params", dict()))
-            es = ElasticSearch(STATIC_DATA_ELASTIC_SEARCH["host"], STATIC_DATA_ELASTIC_SEARCH["protocol"],
-                               STATIC_DATA_ELASTIC_SEARCH["port"])
+            es = ElasticSearch(settings.STATIC_DATA_ELASTIC_SEARCH["host"],
+                               settings.STATIC_DATA_ELASTIC_SEARCH["protocol"],
+                               settings.STATIC_DATA_ELASTIC_SEARCH["port"])
             response = es.get_response(source_data.get("index", ""), query)
 
         elif ds_name == "lambda":

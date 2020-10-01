@@ -2,9 +2,9 @@ import datetime
 import json
 import logging
 
+import settings
 from databases.elasticsearch import ElasticSearch
 from databases.mysql import MYSQL
-from settings.dev import STATIC_DATA_ELASTIC_SEARCH, INVENTORY_DEPTH_ES_INDEX
 from utils.utils import Utils
 
 logger = logging.getLogger("persuasion_engine")
@@ -24,9 +24,9 @@ def create_persuasions(args):
                  "must": [{"term": {"hotelId": args.get("hotel_id", "")}},
                           {"term": {"eventDate": args.get("event_date")}},
                           {"range": {"bucketedScore": {"lt": args.get("bucketed_score_threshold")}}}]}}}
-    es = ElasticSearch(STATIC_DATA_ELASTIC_SEARCH["host"], STATIC_DATA_ELASTIC_SEARCH["protocol"],
-                       STATIC_DATA_ELASTIC_SEARCH["port"])
-    response = es.get_response(INVENTORY_DEPTH_ES_INDEX, query)
+    es = ElasticSearch(settings.STATIC_DATA_ELASTIC_SEARCH["host"], settings.STATIC_DATA_ELASTIC_SEARCH["protocol"],
+                       settings.STATIC_DATA_ELASTIC_SEARCH["port"])
+    response = es.get_response(settings.INVENTORY_DEPTH_ES_INDEX, query)
     logger.info("Getting inventory depth persuasions from ES")
 
     window = 30  # Default window size

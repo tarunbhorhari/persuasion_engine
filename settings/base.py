@@ -17,7 +17,7 @@ DATABASES = {
 }
 
 KAFKA_SERVER = {
-    "host": "localhost:9092",
+    "host": "host.docker.internal:9092",
     "topic": {
         "persuasion": "persuasion-test",
         "watson": "persuasion-test1",
@@ -44,7 +44,20 @@ STATIC_DATA_ELASTIC_SEARCH = {
 PERSUASION_ES_INDEX = "persuasions_test"
 INVENTORY_DEPTH_ES_INDEX = "qsInventoryDepth"
 
+PERSUASION_STATUS = [
+    "NEW", "UPDATED", "EXPIRED", "RESOLVED"
+]
+
+DATE_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+DATE_FORMAT = "%Y-%m-%d"
 TEAMS_NOTIFICATION_URL = "https://outlook.office.com/webhook/eed8c571-d7e7-4efa-934b-7618a7d2845a@268b4680-2b9f-4060-8038-d5f6b23352bf/IncomingWebhook/a74dee06c7744153b4f15d2a659a762a/a013704c-99ce-4d74-9d85-bfbc0cc8acc2"
+MAX_WORKERS = 20
+
+CONFIG_KEEPER_HOST_PROTOCOL = "https"
+CONFIG_KEEPER_HOST = "configkeeperpp.goibibo.com"
+CONFIG_KEEPER_SERVICE_NAME = "persuasion_engine"
+CONFIG_KEEPER_CATEGORY = "templates"
+CONFIG_KEEPER_URL = CONFIG_KEEPER_HOST_PROTOCOL + "://" + CONFIG_KEEPER_HOST + "/api/v1/fetch-config/?service="
 
 TEMPLATE_CHOICES = {
     "inventory": ["sold_out", "fast_filling"],
@@ -53,7 +66,12 @@ TEMPLATE_CHOICES = {
 
 TEMPLATE_CHANNEL_NAME = "persuasion_engine_templates"
 REDIS_SERVER = {
-    "host": "localhost",
+    "host": "host.docker.internal",
     "port": 6379,
     "db": 12
+}
+
+FLASK = {
+    "host": "0.0.0.0",
+    "port": 5000
 }

@@ -3,13 +3,13 @@ import logging
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-from settings.dev import KAFKA_SERVER
+import settings
 
 logger = logging.getLogger("persuasion_engine")
 
 
 class Producer:
-    producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER["host"])
+    producer = KafkaProducer(bootstrap_servers=settings.KAFKA_SERVER["host"])
 
     @staticmethod
     def on_success(args):
