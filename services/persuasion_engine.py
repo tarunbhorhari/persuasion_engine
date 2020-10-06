@@ -100,6 +100,9 @@ class PersuasionEngine:
                 response["workflow"]["consumers"] = Utils.render_template_for_consumers(data, response["workflow"].get(
                     "consumers", {}))
 
+                consumers = copy.deepcopy(template.get("consumers", {}))
+                response["consumers"] = Utils.render_template_for_consumers(data, consumers)
+
                 persuasion = PersuasionEngine.create_persuasion_object(response, template)
                 persuasions.append(persuasion)
 
@@ -124,6 +127,15 @@ class PersuasionEngine:
             persuasion_obj["title"] = template["title"]
             persuasion_obj["type"] = template["type"]
             persuasion_obj["sub_type"] = template["sub_type"]
+            persuasion_obj["type_decs"] = template["type_decs"]
+            persuasion_obj["sub_type_desc"] = template["sub_type_desc"]
+            persuasion_obj["short_desc"] = template["short_desc"]
+            persuasion_obj["long_desc"] = template["long_desc"]
+            persuasion_obj["img_url"] = template["img_url"]
+            persuasion_obj["thum_img_url"] = template["thum_img_url"]
+            persuasion_obj["priority"] = template["priority"]
+            persuasion_obj["group_by"] = template["group_by"]
+            persuasion_obj["segment_criteria"] = template["segment_criteria"]
             persuasion_obj["tags"] = template["tags"]
             persuasion_obj["status"] = settings.PERSUASION_STATUS[0]
             persuasion_obj["created_on"] = str(today.strftime(settings.DATE_TIME_FORMAT))

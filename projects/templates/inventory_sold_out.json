@@ -3,7 +3,12 @@
   "title": "No Inventory - Room Sold Out",
   "type": "inventory",
   "sub_type": "sold_out",
-  "description": "This persuasion is to notify that your inventory is sold out.",
+  "type_decs": "This persuasion is to notify that your inventory is sold out.",
+  "sub_type_desc": "This persuasion is to notify that your inventory is sold out.",
+  "short_desc": "This persuasion is to notify that your inventory is sold out.",
+  "long_desc": "This persuasion is to notify that your inventory is sold out.",
+  "img_url": "",
+  "thum_img_url": "",
   "is_active": true,
   "tags": [
     "ingo"
@@ -52,6 +57,23 @@
       }
     ]
   },
+  "priority": 7,
+  "group_by": [
+    "hotel"
+  ],
+  "segment_criteria": {
+    "country": [
+      "ind",
+      "eng"
+    ],
+    "locality": "",
+    "star_rating": 3,
+    "hotel_type": [
+      "motel",
+      "hotel",
+      "resort"
+    ]
+  },
   "workflow": {
     "name": "WFInventorySoldOut",
     "consumers": {
@@ -62,6 +84,51 @@
           "cta_botton_name": "Update Inventory",
           "messages": "Your Room {room_name} is Sold Out for {checkin_date}. Update inventory to get more bookings!"
         }
+      }
+    }
+  },
+  "consumers": {
+    "m_web": {
+      "is_active": false,
+      "template": "template_id",
+      "color": {
+        "title": "",
+        "sub_title": "",
+        "bg_color": "",
+        "short_desc": "",
+        "long_desc": "",
+        "cta_bg": "",
+        "cta_text": ""
+      },
+      "attributes": {
+        "redirect_link": "/extranet/#inventory",
+        "cta_botton_name": "Update Inventory"
+      }
+    },
+    "web": {
+      "is_active": false,
+      "template": "template_id",
+      "color": {
+      },
+      "attributes": {
+      }
+    },
+    "android": {
+      "is_active": false,
+      "template": "template_id",
+      "color": {
+      },
+      "attributes": {
+        "redirect_link": "/extranet/#inventory",
+        "cta_botton_name": "Update Inventory"
+      }
+    },
+    "ios": {
+      "is_active": false,
+      "template": "template_id",
+      "color": {
+      },
+      "attributes": {
       }
     }
   },
